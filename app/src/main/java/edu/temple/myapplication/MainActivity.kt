@@ -69,12 +69,15 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(item.itemId == R.id.action_start){
             binder?.start(100)
+            return true
         }
         else if(item.itemId == R.id.action_pause){
             binder?.pause()
+            return true
         }
         else if(item.itemId == R.id.action_stop){
             binder?.stop()
+            return true
         }
         return super.onOptionsItemSelected(item)
     }
